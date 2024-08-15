@@ -1,0 +1,230 @@
+/*** 
+
+====================================================================
+    Video Section
+====================================================================
+
+***/
+
+.video-section{
+    position: relative;
+    padding: 0 0 110px;
+    background-color: var(--theme-color1);
+    @include media-breakpoint-down(lg){
+        padding: 0 0 83px;
+    }
+}
+
+.video-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    &:hover {
+        &:before {
+            width: 100%;
+        }
+    }
+    &:before {
+        background-color: var(--theme-color2);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -60px;
+        width: 622px;
+        height: 400px;
+        z-index: -1;
+        @include transition(all 300ms ease);
+        @include media-breakpoint-down(md){
+            top: -25px;
+            width: 50%;
+            height: 50%;
+        }
+    }
+    .play-now2 {
+        display: inline-block;
+        position: absolute;
+    }
+    .icon-box {
+        background-color: rgb(255, 173, 43, .7);
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include transition(all 300ms ease);
+        @include media-breakpoint-down(md){
+            width: 100px;
+            height: 100px;
+        }
+        @include media-breakpoint-down(sm){
+            width: 60px;
+            height: 60px;
+        }
+        &:hover {
+            background-color: rgb(255, 173, 43);
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Video Section Two
+====================================================================
+
+***/
+
+.video-section-two {
+    background-color: #f6f6f6;
+    padding: 0 0 120px;
+    position: relative;
+    @include media-breakpoint-down(lg){
+        padding: 0 0 80px;
+    }
+    .sec-title {
+        margin-bottom: 45px;
+        @include media-breakpoint-down(xxl){
+            margin-left: 70px;
+        }
+        @include media-breakpoint-down(lg){
+            margin-bottom: 20px;
+        }
+        @include media-breakpoint-down(md){
+            margin-left: 0;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        background-color: var(--theme-color2);
+        width: 74px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        @include media-breakpoint-down(md){
+            width: 10px;
+        }
+    }
+    .content-column {
+        .list-style-two {
+            @include media-breakpoint-down(xxl){
+                margin-left: 70px;
+            }
+            @include media-breakpoint-down(md){
+                margin-left: 0;
+            }
+            li {
+                color: var(--theme-color1);
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .image-column {
+        .inner-column {
+            position: relative;
+            margin-right: -350px;
+            z-index: 1;
+            @include media-breakpoint-down(xxl){
+                margin-right: -150px;
+            }
+            @include media-breakpoint-down(xl){
+                margin-right: 0;
+                margin-left: 59px;
+                margin-bottom: 60px;
+            }
+            @include media-breakpoint-down(md){
+                margin-left: 0;
+            }
+            .image {
+                img {
+                    @include media-breakpoint-down(xl){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .video-box {
+            position: absolute;
+            top: calc(50% - 61.5px);
+            left: calc(50% - 61px);
+            @include media-breakpoint-down(sm){
+                top: calc(50% - 42px);
+                left: calc(50% - 42px);
+            }
+            .btn-box {
+                .play-now {
+                    border: 1px solid rgb(255, 255, 255, .2);
+                    display: inline-block;
+                    padding: 14px;
+                    @include transition(all 300ms ease);
+                    @include media-breakpoint-down(sm){
+                        padding: 6px;
+                    }
+                    &:hover {
+                        border-color: var(--theme-color2);
+                    }
+                    .icon {
+                        border-radius: 0;
+                        color: var(--theme-color2);
+                        width: 122px;
+                        height: 123px;
+                        line-height: 122px;
+                        font-size: 26px;
+                        padding: 0;
+                        @include media-breakpoint-down(sm){
+                            width: 70px;
+                            height: 70px;
+                            line-height: 70px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .experience {
+            display: inline-block;
+            border-top: 20px solid #f6f6f6;
+            border-right: 20px solid #f6f6f6;
+            border-left: 20px solid #f6f6f6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include media-breakpoint-down(md){
+                border-top: 10px solid #f6f6f6;
+                border-right: 10px solid #f6f6f6;
+                border-left: 10px solid #f6f6f6;
+            }
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
+            .inner {
+                background-color: var(--theme-color2);
+                width: 220px;
+                height: 248px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 59px 0;
+                @include media-breakpoint-down(lg){
+                    width: 170px;
+                    height: 216px;
+                    padding: 23px 34px 0;
+                }
+                @include media-breakpoint-down(md){
+                    width: 137px;
+                    height: 186px;
+                    padding: 21px 20px 0;
+                }
+                .icon {
+                    color: var(--theme-color1);
+                    font-size: 60px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

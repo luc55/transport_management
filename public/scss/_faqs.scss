@@ -1,0 +1,79 @@
+/*** 
+
+====================================================================
+		FAQ's Sectiom
+====================================================================
+
+***/
+.faq-block {
+    .sec-title {
+        h2 {
+            br {
+                @include media-breakpoint-down(sm){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.accordion-box {
+    position: relative;
+    .block {
+        position: relative;
+        margin-bottom: 25px;
+        .acc-btn {
+        	background-color: #fff;
+            color: var(--theme-color1);
+            position: relative;
+            font-family: var(--title-font);
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 17px 25px;
+            padding-right: 70px;
+            transition: all 500ms ease;
+            .icon {
+                position: absolute;
+                right: 25px;
+				top: 17px;
+                height: 26px;
+                width: 26px;
+                font-size: 14px;
+                line-height: 26px;
+                border-radius: 50%;
+                background-color: var(--theme-color2);
+                color: var(--theme-color1);
+                text-align: center;
+                transition: all 500ms ease;
+            }
+            &.active {
+                color: var(--theme-color1);
+                .icon {
+                    color: var(--bg-theme-color1);
+            
+                    &:before {
+                        content: "\f068";
+                    }
+                }
+            }
+        }
+        .acc-content {
+            position: relative;
+            display: none;
+            .content {
+                position: relative;
+                padding: 16px 34px 16px 25px;
+                .text {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 30px;
+                    margin-bottom: 0;
+                }
+            }
+
+            &.current {
+                display: block;
+            }
+        }
+    }
+}

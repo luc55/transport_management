@@ -1,0 +1,430 @@
+/*** 
+
+====================================================================
+		Work Section
+====================================================================
+
+***/
+
+.work-section {
+    position: relative;
+    padding: 110px 0 120px;
+    @include media-breakpoint-down(lg){
+        padding: 82px 0 90px;
+    }
+    .sec-title {
+        margin-bottom: 120px;
+        h2 {
+            br {
+                @include media-breakpoint-down(lg){
+                    display: none;
+                }
+            }
+        }
+    }
+    .outer-box {
+        box-shadow: 0px 23px 57px 0px rgba(227, 227, 227, 0.26);
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(239, 239, 239);
+        padding: 0 0 47px 0;
+        .inner-outer {
+            margin-top: -60px;
+            @include media-breakpoint-down(lg){
+                margin-top: -100px;
+            }
+        }
+    }
+}
+
+.work-block {
+    @include media-breakpoint-down(lg){
+        margin-top: 40px;
+    }
+    .inner-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &:hover {
+            .icon-box {
+                background-color: var(--theme-color2);
+                border-color: var(--theme-color2);
+                &:before {
+                    left: -10px;
+                    top: -10px;
+                }
+                .icon {
+                    color: var(--theme-color1);
+                }
+            }
+        }
+        .icon-box {
+            border: 1px solid rgb(239, 239, 239);
+            border-radius: 50%;
+            background-color: var(--text-color-bg-theme-color1);
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            @include transition(all 300ms ease);
+            &:before {
+                content: "";
+                position: absolute;
+                border: 1px solid var(--theme-color2);
+                border-radius: 50%;
+                left: 2px;
+                top: 2px;
+                width: 110px;
+                height: 110px;
+                z-index: -1;
+                @include transition(all 300ms ease);
+            }
+            .icon {
+                color: var(--theme-color2);
+                font-size: 72px;
+                @include transition(all 300ms ease);
+            }
+        }
+        .title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+        Work Section Two
+====================================================================
+
+***/
+
+.work-section-two {
+    position: relative;
+    background-color: var(--theme-color1);
+    padding: 0 0 120px;
+    @include media-breakpoint-down(lg){
+        padding: 0 0 60px;
+    }
+}
+
+.work-block-two {
+    @include media-breakpoint-down(xl){
+        margin-bottom: 30px;
+    }
+    .inner-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 288px;
+        height: 288px;
+        border-radius: 50%;
+        background-color: rgb(35, 35, 35);
+        position: relative;
+        @include media-breakpoint-down(xl){
+            margin: 0 auto;
+        }
+        &:hover {
+            .text {
+                color: var(--text-color-bg-theme-color1);
+            }
+            .icon-box {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+        .number {
+            background-color: var(--theme-color2);
+            border: 6px solid var(--theme-color1);
+            border-radius: 50%;
+            color: var(--theme-color1);
+            font-size: 16px;
+            font-weight: 500;
+            width: 51px;
+            height: 51px;
+            line-height: 39px;
+            top: 21px;
+            left: 21px;
+            position: absolute;
+            text-align: center;
+        }
+        .icon-box {
+            margin-bottom: 18px;
+            @include transition(all 300ms ease);
+            .icon {
+                color: var(--theme-color2);
+                font-size: 66px;
+            }
+        }
+        .title {
+            color: var(--text-color-bg-theme-color1);
+            margin-bottom: 10px;
+        }
+        .text {
+            @include transition(all 300ms ease);
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+        Work Section Three
+====================================================================
+
+***/
+.work-section-three {
+    position: relative;
+    padding: 0 0 120px;
+    @include media-breakpoint-down(lg){
+        padding: 0 0 83px;
+    }
+}
+
+.work-block-three {
+    position: relative;
+    .bg-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .inner-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 70px 80px;
+        @include media-breakpoint-down(lg){
+            display: block;
+            text-align: center;
+        }
+        @include media-breakpoint-down(md){
+            padding: 50px 10px;
+        }
+        .sec-title {
+            h2 {
+                font-size: 30px;
+                @include media-breakpoint-down(md){
+                    font-size: 26px;
+                }
+            }
+            .text {
+                margin-top: 6px;
+            }
+        }
+        .theme-btn {
+            @include media-breakpoint-down(lg){
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+        Work Progress
+====================================================================
+
+***/
+
+.work-progress {
+    position: relative;
+    padding: 120px 0 156px;
+    @include media-breakpoint-down(lg){
+        padding: 90px 0 97px;
+    }
+    .skills{
+        margin-top: 44px;
+        margin-bottom: 0;
+        .skill-item{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        .bar-inner .bar{
+            background-color: var(--bg-theme-color2);
+        }
+    }
+    .image-column {
+        padding-right: 48px;
+        @include media-breakpoint-down(xl){
+            padding-right: 15px;
+            margin-bottom: 200px;
+        }
+        .inner-column {
+            width: 100%;
+            height: 100%;
+            .image-box {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                @include media-breakpoint-down(xl){
+                    padding-left: 161px;
+                }
+                @include media-breakpoint-down(sm){
+                    padding-left: 0;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .image-1 {
+                    width: 390px;
+                    height: 400px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include media-breakpoint-down(xl){
+                        position: relative;
+                    }
+                    @include media-breakpoint-down(sm){
+                        width: 100%;
+                    }
+                }
+                .image-2 {
+                    width: 287px;
+                    height: 156px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -36px;
+                    @include media-breakpoint-down(xl){
+                        right: auto;
+                        bottom: -166px;
+                        left: 264px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        display: none;
+                    }
+                }
+                .image-3 {
+                    width: 284px;
+                    height: 258px;
+                    position: absolute;
+                    left: -9px;
+                    bottom: -45px;
+                    @include media-breakpoint-down(xl){
+                        bottom: -175px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+                .experience {
+                    position: absolute;
+                    background-color: var(--theme-color2);
+                    left: 0;
+                    top: 0;
+                    height: 317px;
+                    width: 161px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    padding: 29px 23px;
+                    overflow: hidden;
+                    z-index: 2;
+                    strong{
+                        font-family: var(--title-font);
+                        color: var(--theme-color1);
+                        font-size: 48px;
+                        font-weight: 500;
+                    }
+                    .text{
+                        color: var(--theme-color1);
+                        font-size: 22px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .content-column {
+        .inner-column {
+            position: relative;
+            top: 15px;
+        }
+        .sec-title {
+            h2 {
+                br {
+                    @include media-breakpoint-down(sm){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*================================
+    Progress Bar
+=================================*/
+
+.skills {
+    position: relative;
+    margin-bottom: 50px;
+
+    .skill-item {
+        position: relative;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        .skill-header {
+            position: relative;
+            margin-bottom: 0px;
+            .skill-title {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+        }
+
+        .skill-bar {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            .bar-inner {
+                position: relative;
+                width: 100%;
+                height: 8px;
+                background: #f4f5f8;
+                .bar {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    height: 8px;
+                    width: 0px;
+                    transition: all 3000ms ease;
+                    background-color: var(--bg-theme-color2);
+                }
+
+                .skill-percentage {
+                    position: absolute;
+                    right: 0;
+                    bottom: 100%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--theme-color1);
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

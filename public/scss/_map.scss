@@ -1,0 +1,62 @@
+/*** 
+
+====================================================================
+    Map Section
+====================================================================
+
+***/
+
+.map-section {
+    position: relative;
+    z-index: 1;
+    &.style-two {
+        .map {
+            min-height: 898px;
+        }
+    }
+    .map{
+        position: relative;
+        min-height: 541px;
+        width: 100%;
+        display: block;
+        filter: grayscale(100%);
+    }
+    .branches-outer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+.branch-block{
+    position: relative;
+    .inner-box{
+        position: relative;
+        background-color: #fff;
+        padding: 40px;
+        top: -30%;
+        @include transition(all 300ms ease);
+        &:hover{
+            background-color: var(--bg-theme-color2);
+            .info-list li,
+            .info-list li i,
+            .title{
+                color: #fff;
+            }
+        }
+    }
+    .title {}
+    .info-list {
+        position: relative;
+        margin-bottom: 35px;
+        li {
+            border-bottom: 1px solid rgb(232, 232, 232);
+            padding-bottom: 14px;
+            margin-bottom: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

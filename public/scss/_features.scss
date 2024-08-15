@@ -1,0 +1,97 @@
+/*** 
+
+====================================================================
+    Features Section
+====================================================================
+
+***/
+
+.features-section {
+    background-color: var(--theme-color1);
+    padding: 110px 0 180px;
+    position: relative;
+    @include media-breakpoint-down(lg){
+        padding: 83px 0 150px;
+    }
+    @include media-breakpoint-down(md){
+        padding: 83px 0 115px;
+    }
+    .sec-title {
+        margin-bottom: 76px;
+        z-index: 1;
+        @include media-breakpoint-down(lg){
+            margin-bottom: 50px;
+        }
+        h2 {
+            br {
+                @include media-breakpoint-down(sm){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.feature-block {
+    .inner-box {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        @include media-breakpoint-down(xl){
+            margin-bottom: 40px;
+        }
+        @include media-breakpoint-down(sm){
+            display: block;
+            text-align: center;
+        }
+        &:hover {
+            .icon-box {
+                &:before {
+                    background-color: rgba(255, 173, 43);
+                }
+            }
+        }
+        .icon-box {
+            position: relative;
+            margin-right: 20px;
+            @include media-breakpoint-down(sm){
+                display: inline-block;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            &:before {
+                border: 1px solid var(--theme-color2);
+                background-color: rgba(255, 173, 43, 0.4);
+                border-radius: 50%;
+                content: "";
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                left: -15px;
+                top: -10px;
+                @include transition(all 300ms ease);
+            }
+            .icon {
+                color: var(--theme-color2);
+                font-size: 57px;
+                border: 1px solid var(--theme-color2);
+                border-radius: 50%;
+                background-color: #fff;
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                line-height: 114px;
+                position: relative;
+                text-align: center;
+            }
+        }
+        .content-box {
+            .title {
+                color: var(--text-color-bg-theme-color1);
+                margin-bottom: 10px;
+            }
+            .text {}
+        }
+    }
+}

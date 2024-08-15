@@ -1,0 +1,90 @@
+/*** 
+
+====================================================================
+    Why Choose Us
+====================================================================
+
+***/
+
+.why-choose-us {
+    background-color: rgb(247, 247, 247);
+    position: relative;
+    padding: 120px 0 120px;
+    @include media-breakpoint-down(lg){
+        padding: 90px 0 90px;
+    }
+    .content-column {
+        .inner-column {
+            .sec-title {
+                margin-bottom: 40px;
+                h2 {
+                    br {
+                        @include media-breakpoint-down(md){
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .text {
+                margin-bottom: 20px;
+                br {
+                    @include media-breakpoint-down(md){
+                        display: none;
+                    }
+                }
+            }
+            .list-style-two {
+                margin-bottom: 35px;
+                li {
+                    color: var(--theme-color1);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        @include media-breakpoint-down(lg){
+            margin-bottom: 50px;
+        }
+        .inner-column {
+            .image {
+                position: relative;
+            }
+            .experience {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include media-breakpoint-down(lg){
+                    left: 0;
+                }
+                .inner {
+                    background-color: #fff;
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px;
+                    padding-right: 40px;
+                    .image {
+                        margin-right: 24px;
+                        margin-bottom: 0;
+                    }
+                    .content {
+                        strong {
+                            color: var(--theme-color2);
+                            font-family: var(--title-font);
+                            font-size: 36px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                        .text {
+                            color: var(--theme-color1);
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

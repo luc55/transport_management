@@ -1,0 +1,81 @@
+/***
+
+==================================================================
+    Pricing Section
+==================================================================
+
+***/
+
+.pricing-section{
+    position: relative;
+    padding: 0 0 120px;
+    @include media-breakpoint-down(lg){
+        padding: 0 0 90px;
+    }
+    &:before {
+        background-color: #fafafa;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        left: 0;
+        top: -337px;
+        background: linear-gradient(#fafafa 60%, #fafafa 100%);
+    }
+}
+
+.pricing-block {
+    @include media-breakpoint-down(lg){
+        margin-bottom: 20px;
+    }
+    .inner-box {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 30px 0px rgba(158, 158, 158, 0.08);
+        padding: 65px 0 65px 0;
+        position: relative;
+        text-align: center;
+        .title {
+            margin-bottom: 20px;
+        }
+        .price {
+            color: var(--theme-color2);
+            margin-bottom: 13px;
+        }
+        .validaty {
+            display: inline-block;
+            margin-bottom: 41px;
+        }
+        .features {
+            .features-item {
+                margin-bottom: 26px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.active,
+                &:hover {
+                    .title {
+                        color: #b3b3b3;
+                    }
+                    .text {
+                        color: #b3b3b3;
+                    }
+                }
+                .title {
+                    margin-bottom: 3px;
+                    @include transition(all 300ms ease);
+                }
+                .text {
+                    @include transition(all 300ms ease);
+                }
+            }
+        }
+        .btn-box {
+            margin-top: 38px;
+            position: relative;
+            z-index: 1;
+            .text {
+                margin-top: 20px;
+            }
+        }
+    }
+}
