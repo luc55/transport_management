@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\agency;
 use Illuminate\Http\Request;
+use Exception;
 
 class AgencyController extends Controller
 {
@@ -12,8 +13,12 @@ class AgencyController extends Controller
      */
     public function index()
     {
-        $agencies = agency::all();
-        return view('pages.agencies.index', compact('agencies'));
+        try {
+            $agencies = agency::all();
+            return view('pages.agencies.index', compact('agencies'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -21,7 +26,11 @@ class AgencyController extends Controller
      */
     public function create()
     {
-        return view('pages.agencies.create');
+        try {
+            return view('pages.agencies.create');
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -29,23 +38,27 @@ class AgencyController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'name' => 'required|',
-            'description' => 'required|',
-        ]);
-
-        //Save image with extension in public
-        $imageName = time().'.'.$request->image->extension();         
-        $request->image->move(public_path('Agencygalery'), $imageName);
-
-        $data = new agency; 
-        $data->image = $imageName;     
-        $data->name = $request->name;        
-        $data->description = $request->description;
-        $data->save();
-
-        return redirect()->route('agency.index')->with('success', 'Agency created successfully.');
+        try {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'name' => 'required|',
+                'description' => 'required|',
+            ]);
+    
+            //Save image with extension in public
+            $imageName = time().'.'.$request->image->extension();         
+            $request->image->move(public_path('Agencygalery'), $imageName);
+    
+            $data = new agency; 
+            $data->image = $imageName;     
+            $data->name = $request->name;        
+            $data->description = $request->description;
+            $data->save();
+    
+            return redirect()->route('agency.index')->with('success', 'Agency created successfully.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -53,7 +66,11 @@ class AgencyController extends Controller
      */
     public function show(agency $agency)
     {
-        return view('pages.agencies.show',compact('agency'));
+        try {
+            return view('pages.agencies.show',compact('agency'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -61,7 +78,11 @@ class AgencyController extends Controller
      */
     public function edit(agency $agency)
     {
-        return view('pages.agencies.edit',compact('agency'));
+        try {
+            return view('pages.agencies.edit',compact('agency'));
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -69,23 +90,28 @@ class AgencyController extends Controller
      */
     public function update(Request $request, agency $agency)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'name' => 'required|',
-            'description' => 'required|',
-        ]);
+        try {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'name' => 'required|',
+                'description' => 'required|',
+            ]);
+    
+            //Save image with extension in public
+            $imageName = time().'.'.$request->image->extension();         
+            $request->image->move(public_path('Agencygalery'), $imageName);
+    
+            $agency->image = $imageName;     
+            $agency->name = $request->name;        
+            $agency->description = $request->description;
+            $agency->save();
+    
+            return redirect()->route('agency.index')->with('success', 'Agency updated successfully.');
 
-        //Save image with extension in public
-        $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('Agencygalery'), $imageName);
+        } catch (Exception $e) {
 
-        $agency->image = $imageName;
-        $agency->name = $request->name;
-        $agency->description = $request->description;
-        $agency->save();
-
-        return redirect()->route('agency.index');
-
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 
     /**
@@ -93,7 +119,11 @@ class AgencyController extends Controller
      */
     public function destroy(agency $agency)
     {
-        $agency->delete();
-        return redirect()->route('agency.index')->with('success','Agency deleted successfully');
+        try {
+            $agency->delete();
+            return redirect()->route('agency.index')->with('success', 'Agency deleted successfully.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Something went wrong');
+        }
     }
 }

@@ -106,9 +106,8 @@
 
     @yield('contenu')
 
-
-
-
+    
+       
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="{{ asset('assets/plugins/jquery/jquery-1.9.1.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/jquery/jquery-migrate-1.1.0.min.js') }}"></script>

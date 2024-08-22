@@ -3,7 +3,6 @@
 
 @section('contenu')
 
-
     <div id="content" class="content">
         <!-- begin breadcrumb -->
         <ol class="breadcrumb pull-right">

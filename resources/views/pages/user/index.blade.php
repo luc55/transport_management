@@ -3,10 +3,15 @@
 
 @section('contenu')
 
-
-
         <!-- begin #content -->
         <div id="content" class="content">
+
+            @if (Session::has('success'))
+            <div id="success-alert" class="alert alert-success alert-dismissable" style="margin-top: 20px;">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Succès!</strong> {{ Session::get('success') }}
+            </div>
+            @endif
             <!-- begin breadcrumb -->
             <ol class="breadcrumb pull-right">
                 <li><a href="javascript:;">Acceuil</a></li>
@@ -106,5 +111,14 @@
             </div>
             <!-- end row -->
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var alert = document.getElementById('success-alert');
+                if (alert) {
+                    alert.style.display = 'none';
+                }
+            }, 3000); 
+        });
+    </script>
 @stop

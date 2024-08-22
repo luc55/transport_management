@@ -49,6 +49,9 @@
                     </li>
                 </ul>
                 <!-- end header navigation right -->
+
+                 {{-- toast --}}
+      
             </div>
             <!-- end container-fluid -->
         </div>
