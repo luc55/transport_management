@@ -10,13 +10,16 @@ import Projects1 from "../components/sections/Projects1"
 import Services1 from "../components/sections/Services1"
 import Team1 from "../components/sections/Team1"
 import Testimonial1 from "../components/sections/Testimonial1"
+import React, { Suspense } from 'react';
 
 export default function Home() {
 
     return (
         <>
             <Layout headerStyle={1} footerStyle={1}>
-                <Banner1 />
+            <Suspense fallback={<div>Loading...</div>}>
+                    <Banner1 />
+            </Suspense>
                 <Process1 />
                 <About1 addClass={"pt-0"}/>
                 <Projects1 />

@@ -16,7 +16,7 @@ export default function Footer3() {
 
                             <div className="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-6">
                                 <div className="footer-widget about-widget">
-                                    <div className="logo"><Link href="/"><img src="/images/logo-2.png" alt="" /></Link></div>
+                                    <div className="logo"><Link href="/"><img src="/images/sah.png" width={100} alt="" /></Link></div>
                                     <ul className="contact-info">
                                         <li><i className="fa fa-map-marker-alt"></i> 215 Ulta Market Ave, Brooklyn <br/> CA, 159336</li>
                                         <li><i className="fa fa-envelope"></i> <Link href="mailto:supports@busimax.com">supports@busimax.com</Link></li>

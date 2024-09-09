@@ -12,7 +12,7 @@ export default function Footer4() {
 
                     <div className="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div className="footer-widget about-widget">
-                            <div className="logo"><Link href="/"><img src="/images/logo.png" alt="" /></Link></div>
+                            <div className="logo"><Link href="/"><img src="/images/sah.png" width={100} alt="" /></Link></div>
                             <div className="text">Feugiat bibendum risus conubia massa suscipit <br/>nullam arcu fusce curae hase sollicitudin lacinia <br/>magna potenti mattis facilisi litora nisi.</div>
                             <ul className="social-icon-six">
 								<li><Link href="#"><i className="fab fa-facebook"></i></Link></li>

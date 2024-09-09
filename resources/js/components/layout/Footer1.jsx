@@ -31,7 +31,7 @@ export default function Footer1() {
 
                         <div className="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-6">
                             <div className="footer-widget about-widget">
-                                <div className="logo"><Link href="/"><img src="/images/logo.png" alt="" /></Link></div>
+                                <div className="logo"><Link href="/"><img src="/images/sah.png" width={100} alt="" /></Link></div>
                                 <div className="text">We understand that every business is unique, which is why we tailor our services to meet your specific needs.</div>
                             </div>
                         </div>
@@ -40,10 +40,10 @@ export default function Footer1() {
                             <div className="footer-widget company-widget">
                                 <h3 className="widget-title">Our Company</h3>
                                 <ul className="user-links">
-                                    <li><Link href="page-about">About us</Link></li>
-                                    <li><Link href="page-team">Team</Link></li>
-                                    <li><Link href="/">Partners & Certifications</Link></li>
-                                    <li><Link href="/">Reviews & Awards</Link></li>
+                                    <li><Link to="/page-about">About us</Link></li>
+                                    <li><Link to="/page-team">Team</Link></li>
+                                    <li><Link to="/">Partners & Certifications</Link></li>
+                                    <li><Link to="/">Reviews & Awards</Link></li>
                                 </ul>
                             </div>
                         </div>

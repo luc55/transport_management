@@ -21,7 +21,7 @@ const About1 = ({ addClass }) => {
                             <div className="text">At Transend, we redefine the boundaries of supply chain management, leveraging cutting-edge technology and innovative solutions to deliver seamless logistics services to our valued clients. With a commitment to excellence, Transend takes pride in offering a comprehensive suite of services, including transportation, warehousing, inventory management, customs clearance, and last-mile delivery.</div>
 
                             <div className="btn-box d-flex align-items-center">
-                                <Link href="page-about" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Our Services</span></Link>
+                                <Link to="page-about" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Our Services</span></Link>
 
                                 <div className="founder-info">
                                     <div className="thumb"><img src="/images/resource/thumb-1.jpg" alt=""/></div>

@@ -23,9 +23,9 @@ const Banner1 = () => {
                         <div className="bg-image" style={{ backgroundImage: 'url(images/main-slider/1.jpg)' }}></div>
                         <div className="auto-container">
                             <div className="content-box">
-                                <h2 className="sub-title animate-1"><span>Fast, Certified &</span></h2>
-                                <h1 className="title animate-2"><span>Freight Solutions</span>.</h1>
-                                <div className="text animate-3">Logistics services play a vital role in ensuring the smooth and efficient flow <br/> of goods and services from suppliers to customers.</div>
+                                <h2 className="sub-title animate-1"><span>SAHRAOUI</span></h2>
+                                <h1 className="title animate-2"><span>Solutions de Fret</span>.</h1>
+                                <div className="text animate-3">Les services logistiques jouent un rôle essentiel en garantissant le flux fluide et efficace <br/> des biens et services des fournisseurs vers les clients.</div>
                                 <div className="btn-box animate-4">
                                     <Link href="page-about" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Get a Quote</span></Link>
                                 </div>
@@ -39,9 +39,10 @@ const Banner1 = () => {
                         <div className="bg-image" style={{ backgroundImage: 'url(images/main-slider/2.jpg)' }}></div>
                         <div className="auto-container">
                             <div className="content-box">
-                                <h2 className="sub-title animate-1"><span>Fast, Certified &</span></h2>
-                                <h1 className="title animate-2"><span>Freight Solutions</span>.</h1>
-                                <div className="text animate-3">Logistics services play a vital role in ensuring the smooth and efficient flow <br/> of goods and services from suppliers to customers.</div>
+                                <h2 className="sub-title animate-1"><span>SAHRAOUI</span></h2>
+                                <h1 className="title animate-2"><span>Transport</span>.</h1>
+                                <div className="text animate-3">
+                                Le transport est un composant crucial des échanges internationaux, <br/> facilitant la circulation des marchandises entre les pays. </div>
                                 <div className="btn-box animate-4">
                                     <Link href="page-about" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Get a Quote</span></Link>
                                 </div>

@@ -26,7 +26,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                     <div className="auto-container">
                         <div className="inner-container">
                             <div className="logo-box">
-                                <div className="logo"><Link href="/"><img src="/images/logo-2.png" alt="" title="Transend"/></Link></div>
+                                <div className="logo"><Link to="/"><img src="/images/sah.png" width={100} alt="" title="Transend"/></Link></div>
                             </div>
 
                             <div className="outer-box">
@@ -54,7 +54,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 
 
                                     <div className="outer-box">
-                                        <Link href="page-contact" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Track Your Order</span></Link>
+                                        <Link to="page-contact" className="theme-btn btn-style-one"><i className="icon fa fas fa-plus"></i><span className="btn-title">Track Your Order</span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 
                     <nav className="menu-box">
                         <div className="upper-box">
-                            <div className="nav-logo"><Link href="/"><img src="/images/logo-2.png" alt=""  /></Link></div>
+                            <div className="nav-logo"><Link to="/"><img src="/images/sah.png" alt=""  /></Link></div>
                             <div className="close-btn" onClick={handleMobileMenu}><i className="icon fa fa-times" /></div>
                         </div>
                         <MobileMenu />
@@ -125,7 +125,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                         <div className="inner-container">
                             {/*Logo*/}
                             <div className="logo">
-                                <Link href="/" ><img src="/images/logo-2.png" alt=""  /></Link>
+                                <Link to="/" ><img src="/images/sah.png" alt=""  /></Link>
                             </div>
                             {/*Right Col*/}
                             <div className="nav-outer">

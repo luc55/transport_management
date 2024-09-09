@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
 
+
+
 export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, handleMobileMenu }) {
     return (
         <>
             <header className={`main-header header-style-two ${isSearch ? "moblie-search-active" : ""}`}>
-
+            
                 <div className="header-top">
                     <div className="auto-container">
                         <div className="inner-container">
@@ -33,7 +35,7 @@ export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <div className="auto-container">
                         <div className="inner-container">
                             <div className="logo-box">
-                                <div className="logo"><Link href="/"><img src="/images/logo-2.png" alt="" title="Transend"/></Link></div>
+                                <div className="logo"><Link href="/"><img src="/images/sah.png" width={100} alt="" title="Transend"/></Link></div>
                             </div>
                             <div className="main-box">
 
@@ -66,7 +68,7 @@ export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, 
                     {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
                     <nav className="menu-box">
                         <div className="upper-box">
-                            <div className="nav-logo"><Link href="/"><img src="/images/logo.png" alt=""/></Link></div>
+                            <div className="nav-logo"><Link href="/"><img src="/images/sah.png" alt=""/></Link></div>
                             <div className="close-btn" onClick={handleMobileMenu}><i className="icon fa fa-times" /></div>
                         </div>
                         <MobileMenu />
@@ -124,7 +126,7 @@ export default function Header2({ scroll, isSearch, handleSearch, isMobileMenu, 
                         <div className="inner-container">
                             {/*Logo*/}
                             <div className="logo">
-                                <Link href="/"><img src="/images/logo-2.png" alt="" /></Link>
+                                <Link href="/"><img src="/images/sah.png" alt="" /></Link>
                             </div>
                             {/*Right Col*/}
                             <div className="nav-outer">
