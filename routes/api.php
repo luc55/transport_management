@@ -2,6 +2,12 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+// group controllers by namespace
+use App\Http\Controllers\ApiControllers\BlogsController;
+use App\Http\Controllers\ApiControllers\AgenciesController;
+use App\Http\Controllers\ApiControllers\ServicesController;
+
+
 
 /*
 |--------------------------------------------------------------------------
